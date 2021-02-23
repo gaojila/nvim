@@ -27,21 +27,30 @@ lspconfig.gopls.setup {
   }
 }
 
+local system_name
+if vim.fn.has("mac") == 1 then
+  system_name = "macOS"
+elseif vim.fn.has("unix") == 1 then
+  system_name = "Linux"
+else
+  print("Unsupported system for sumneko")
+end
+local sumneko_root_path = global.home .. '/workstation/lua-language-server'
+local sumneko_binary = sumneko_root_path.."/bin/"..system_name.."/lua-language-server"
 lspconfig.sumneko_lua.setup {
-  cmd = {
-    global.home.."/workstation/lua-language-server/bin/macOS/lua-language-server",
-    "-E",
-    global.home.."/workstation/lua-language-server/main.lua"
-  };
+  cmd = {sumneko_binary, "-E", sumneko_root_path .. "/main.lua"};
   settings = {
     Lua = {
       diagnostics = {
         enable = true,
-        globals = {"vim","packer_plugins"}
+        globals = {"vim"}
       },
       runtime = {version = "LuaJIT"},
       workspace = {
-        library = vim.list_extend({[vim.fn.expand("$VIMRUNTIME/lua")] = true},{}),
+        library = vim.list_extend({
+          [vim.fn.expand("$VIMRUNTIME/lua")] = true,
+          [vim.fn.expand(global.home .. "/workstation/openresty/lualib")] = true
+        },{}),
       },
     },
   }
