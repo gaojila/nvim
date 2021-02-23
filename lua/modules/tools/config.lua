@@ -96,4 +96,16 @@ function config.fomatter_nvim()
     })
 end
 
+function config.vimwiki()
+  vim.g.vimwiki_list = {
+    {
+      path = '~/workstation/vimwiki/',
+      syntax = 'markdown',
+      ext = '.md',
+      path_html = '~/workstation/vimwiki_html/',
+      custom_wiki2html = 'vimwiki_markdown'
+    }
+  }
+end
+
 return config

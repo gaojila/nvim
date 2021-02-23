@@ -44,4 +44,16 @@ tools['iamcco/markdown-preview.nvim'] = {
   end
 }
 
+tools['vimwiki/vimwiki'] = {
+  config = conf.vimwiki
+}
+
+tools['ferrine/md-img-paste.vim'] = {
+  ft = 'markdown',
+  confg = function ()
+    vim.g.mdip_imgdir = 'pic'
+    vim.g.mdip_imgname = 'image'
+  end
+}
+
 return tools
