@@ -38,7 +38,9 @@ tools['brooth/far.vim'] = {
 }
 
 tools['iamcco/markdown-preview.nvim'] = {
-  fmt = 'markdown',
+  ft = 'markdown',
+  cmd = 'MarkdownPreview',
+  run = 'sh -c "cd app & yarn install"',
   config = function ()
     vim.g.mkdp_auto_start = 0
   end
