@@ -46,6 +46,23 @@ function autocmd.load_autocmds()
 
     ft = {
       {"FileType", "dashboard", "set showtabline=0 | autocmd WinLeave <buffer> set showtabline=2"};
+      {"FileType", "markdown", "inoremap <buffer> ,f <Esc>/<++><CR>:nohlsearch<CR>\"_c4l"};
+      {"FileType", "markdown", "inoremap <buffer> ,w <Esc>/ <++><CR>:nohlsearch<CR>\"_c5l<CR>"};
+      {"FileType", "markdown", "inoremap <buffer> ,n ---<Enter><Enter>"};
+      {"FileType", "markdown", "inoremap <buffer> ,b **** <++><Esc>F*hi"};
+      {"FileType", "markdown", "inoremap <buffer> ,s ~~~~ <++><Esc>F~hi"};
+      {"FileType", "markdown", "inoremap <buffer> ,i ** <++><Esc>F*i"};
+      {"FileType", "markdown", "inoremap <buffer> ,d `` <++><Esc>F`i"};
+      {"FileType", "markdown", "inoremap <buffer> ,c ```<Enter><++><Enter>```<Enter><Enter><++><Esc>4kA"};
+      {"FileType", "markdown", "inoremap <buffer> ,m - [ ]"};
+      {"FileType", "markdown", "inoremap <buffer> ,p ![](<++>) <++><Esc>F[a"};
+      {"FileType", "markdown", "inoremap <buffer> ,a [](<++>) <++><Esc>F[a"};
+      {"FileType", "markdown", "inoremap <buffer> ,1 #<Space><Enter><++><Esc>kA"};
+      {"FileType", "markdown", "inoremap <buffer> ,2 ##<Space><Enter><++><Esc>kA"};
+      {"FileType", "markdown", "inoremap <buffer> ,3 ###<Space><Enter><++><Esc>kA"};
+      {"FileType", "markdown", "inoremap <buffer> ,4 ####<Space><Enter><++><Esc>kA"};
+      {"FileType", "markdown", "inoremap <buffer> ,l --------<Enter>"};
+      {"FileType", "markdown", "nnoremap <silent> <C-p> :call mdip#MarkdownClipboardImage()<CR>"};
       {"BufNewFile,BufRead","*.toml"," setf toml"},
     };
 
