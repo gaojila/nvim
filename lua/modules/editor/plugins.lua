@@ -49,7 +49,9 @@ editor['kana/vim-smartchr'] = {
   config = conf.vim_smartchar
 }
 
-editor['mg979/vim-visual-multi'] = {}
+editor['mg979/vim-visual-multi'] = {
+  config = conf.vim_visual_multi
+}
 
 editor['godlygeek/tabular'] = {}
 

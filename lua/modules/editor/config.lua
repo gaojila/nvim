@@ -5,7 +5,7 @@ function config.delimimate()
   vim.g.delimitMate_expand_space = 1
   vim.g.delimitMate_smart_quotes = 1
   vim.g.delimitMate_expand_inside_quotes = 0
-  vim.api.nvim_command('au FileType markdown let b:delimitMate_nesting_quotes = ["`"]')
+  vim.api.nvim_command('autuocmd FileType markdown let b:delimitMate_nesting_quotes = ["`"]')
 end
 
 function config.nvim_colorizer()
@@ -38,6 +38,13 @@ end
 
 function config.vim_smartchar()
   vim.api.nvim_command("autocmd FileType go inoremap <buffer><expr> ; smartchr#loop(':=',';')")
+end
+
+function config.vim_visual_multi()
+  vm = {}
+  vm["Select Cursor Down"] = '<M-C-j>'
+  vm["Select Cursor Down"] = '<M-C-k>'
+  vim.g.VM_maps = vm
 end
 
 return config
