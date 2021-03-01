@@ -30,15 +30,15 @@ local enhance_attach = function(client,bufnr)
   api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
 end
 
-lspconfig.gopls.setup {
-  cmd = {"gopls","--remote=auto"},
-  on_attach = enhance_attach,
-  capabilities = capabilities,
-  init_options = {
-    usePlaceholders=true,
-    completeUnimported=true,
-  }
-}
+-- lspconfig.gopls.setup {
+--   cmd = {"gopls","--remote=auto"},
+--   on_attach = enhance_attach,
+--   capabilities = capabilities,
+--   init_options = {
+--     usePlaceholders=true,
+--     completeUnimported=true,
+--   }
+-- }
 
 local system_name
 if vim.fn.has("mac") == 1 then
@@ -89,7 +89,7 @@ lspconfig.sumneko_lua.setup {
 -- local servers = {
 --   'dockerls','bashls','rust_analyzer','pyls'
 -- }
--- 
+--
 -- for _,server in ipairs(servers) do
 --   lspconfig[server].setup {
 --     on_attach = enhance_attach
