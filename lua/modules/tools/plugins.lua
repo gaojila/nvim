@@ -11,22 +11,13 @@ tools['editorconfig/editorconfig-vim'] = {
   ft = { 'go','typescript','javascript','vim','rust','zig','c','cpp' }
 }
 
-tools['glepnir/indent-guides.nvim'] = {
-  event = 'BufReadPre *',
-}
-
 tools['glepnir/prodoc.nvim'] = {
-  event = 'BufReadPre *'
+  event = 'BufReadPre'
 }
 
 tools['liuchengxu/vista.vim'] = {
   cmd = 'Vista',
   config = conf.vim_vista
-}
-
-tools['mhartington/formatter.nvim'] = {
-  ft = { 'typescript','typescriptreact','lua' },
-  config = conf.fomatter_nvim
 }
 
 tools['brooth/far.vim'] = {
