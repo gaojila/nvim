@@ -69,29 +69,29 @@ lspconfig.sumneko_lua.setup {
   }
 }
 
-lspconfig.tsserver.setup {
-  on_attach = function(client)
-    client.resolved_capabilities.document_formatting = false
-    enhance_attach(client)
-  end
-}
+-- lspconfig.tsserver.setup {
+--   on_attach = function(client)
+--     client.resolved_capabilities.document_formatting = false
+--     enhance_attach(client)
+--   end
+-- }
 
-lspconfig.clangd.setup {
-  cmd = {
-    "clangd",
-    "--background-index",
-    "--suggest-missing-includes",
-    "--clang-tidy",
-    "--header-insertion=iwyu",
-  },
-}
+-- lspconfig.clangd.setup {
+--   cmd = {
+--     "clangd",
+--     "--background-index",
+--     "--suggest-missing-includes",
+--     "--clang-tidy",
+--     "--header-insertion=iwyu",
+--   },
+-- }
 
-local servers = {
-  'dockerls','bashls','rust_analyzer','pyls'
-}
-
-for _,server in ipairs(servers) do
-  lspconfig[server].setup {
-    on_attach = enhance_attach
-  }
-end
+-- local servers = {
+--   'dockerls','bashls','rust_analyzer','pyls'
+-- }
+-- 
+-- for _,server in ipairs(servers) do
+--   lspconfig[server].setup {
+--     on_attach = enhance_attach
+--   }
+-- end
