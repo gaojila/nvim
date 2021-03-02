@@ -87,7 +87,7 @@ lspconfig.sumneko_lua.setup {
 -- }
 
 local servers = {
-  'dockerls','bashls','rust_analyzer','pyls'
+  'bashls','pyright'
 }
 
 for _,server in ipairs(servers) do
