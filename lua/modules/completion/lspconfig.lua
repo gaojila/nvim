@@ -69,19 +69,6 @@ lspconfig.sumneko_lua.setup {
   }
 }
 
--- lspconfig.pyright.setup {
---   cmd = { "pyright-langserver", "--stdio" };
---   filetypes = { "python" };
---   settings = {
---     python = {
---       analysis = {
---         autoSearchPaths = true,
---         useLibraryCodeForTypes = true
---       }
---     }
---   }
--- }
-
 -- lspconfig.tsserver.setup {
 --   on_attach = function(client)
 --     client.resolved_capabilities.document_formatting = false
