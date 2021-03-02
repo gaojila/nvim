@@ -69,6 +69,19 @@ lspconfig.sumneko_lua.setup {
   }
 }
 
+-- lspconfig.pyright.setup {
+--   cmd = { "pyright-langserver", "--stdio" };
+--   filetypes = { "python" };
+--   settings = {
+--     python = {
+--       analysis = {
+--         autoSearchPaths = true,
+--         useLibraryCodeForTypes = true
+--       }
+--     }
+--   }
+-- }
+
 -- lspconfig.tsserver.setup {
 --   on_attach = function(client)
 --     client.resolved_capabilities.document_formatting = false
@@ -86,12 +99,12 @@ lspconfig.sumneko_lua.setup {
 --   },
 -- }
 
--- local servers = {
---   'dockerls','bashls','rust_analyzer','pyls'
--- }
---
--- for _,server in ipairs(servers) do
---   lspconfig[server].setup {
---     on_attach = enhance_attach
---   }
--- end
+local servers = {
+  'bashls','pyls'
+}
+
+for _,server in ipairs(servers) do
+  lspconfig[server].setup {
+    on_attach = enhance_attach
+  }
+end
