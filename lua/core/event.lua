@@ -63,7 +63,7 @@ function autocmd.load_autocmds()
       {"FileType", "markdown", "inoremap <buffer> ,4 ####<Space><Enter><++><Esc>kA"};
       {"FileType", "markdown", "inoremap <buffer> ,l --------<Enter>"};
       {"FileType", "markdown", "nnoremap <silent> <C-p> :call mdip#MarkdownClipboardImage()<CR>"};
-      {"BufNewFile,BufRead","*.toml"," setf toml"},
+      {"BufNewFile,BufRead", "*.toml"," setf toml"},
     };
 
     yank = {
