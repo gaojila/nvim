@@ -30,16 +30,21 @@ completion['nvim-telescope/telescope.nvim'] = {
   }
 }
 
--- completion['mattn/vim-sonictemplate'] = {
---   cmd = 'Template',
---   ft = {'go','typescript','lua','javascript','vim','rust','markdown'},
---   config = conf.vim_sonictemplate,
--- }
+completion['glepnir/smartinput.nvim'] = {
+  ft = 'go',
+  config = conf.smart_input
+}
 
--- completion['mattn/emmet-vim'] = {
---   event = 'InsertEnter',
---   ft = {'html','css','javascript','javascriptreact','vue','typescript','typescriptreact'},
---   config = conf.emmet,
--- }
+completion['mattn/vim-sonictemplate'] = {
+  cmd = 'Template',
+  ft = {'go','typescript','lua','javascript','vim','rust','markdown'},
+  config = conf.vim_sonictemplate,
+}
+
+completion['mattn/emmet-vim'] = {
+  event = 'InsertEnter',
+  ft = {'html','css','javascript','javascriptreact','vue','typescript','typescriptreact'},
+  config = conf.emmet,
+}
 
 return completion

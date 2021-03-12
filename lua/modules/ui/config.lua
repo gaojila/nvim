@@ -17,6 +17,7 @@ end
 
 function config.dashboard()
   local home = os.getenv('HOME')
+  vim.g.dashboard_footer_icon = '🐬 '
   vim.g.dashboard_preview_command = 'cat'
   vim.g.dashboard_preview_pipeline = 'lolcat'
   vim.g.dashboard_preview_file = home .. '/.config/nvim/static/girl.txt'
@@ -34,8 +35,8 @@ function config.dashboard()
       description = {'  Find  File                              SPC f f'},
       command = 'DashboardFindFile'},
     new_file = {
-     description = {'  New   File                              SPC t f'},
-     command =  'DashboardNewFile'},
+     description = {'  File Browser                            SPC f d'},
+     command =  'Telescope file_browser'},
     find_word = {
      description = {'  Find  word                              SPC f w'},
      command = 'DashboardFindWord'},
