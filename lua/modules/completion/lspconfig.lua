@@ -105,6 +105,10 @@ lspconfig.sumneko_lua.setup {
 --   },
 -- }
 
+lspconfig.rust_analyzer.setup {
+  capabilities = capabilities,
+}
+
 local servers = {
   'bashls','pyright'
 }
