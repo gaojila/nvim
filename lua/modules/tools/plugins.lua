@@ -54,9 +54,9 @@ tools['ferrine/md-img-paste.vim'] = {
 
 tools['dhruvasagar/vim-table-mode'] = {
   ft = 'markdown',
-  config = function ()
-    vim.g.table_mode_cell_text_object_i_map = 'k<Bar>'
-  end
+  -- config = function ()
+  --   vim.g.table_mode_cell_text_object_i_map = 'k<Bar>'
+  -- end
 }
 
 return tools
