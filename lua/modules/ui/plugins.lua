@@ -17,7 +17,7 @@ ui['glepnir/galaxyline.nvim'] = {
 
 ui['lukas-reineke/indent-blankline.nvim'] = {
   event = 'BufRead',
-  branch = 'lua',
+  branch = 'master',
   config = conf.indent_blakline
 }
 
